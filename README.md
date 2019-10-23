@@ -23,6 +23,16 @@ To spin it up as prod, run:
 
     $ yarn start
 
+The demo admin user is:
+
+- login: `admin`
+- password: `unsafe_demo`
+
+The demo front end user is:
+
+- login: `FirstUser`
+- password: `unsafe_demo`
+
 ## Development
 
 From a development point of view there wasn't much at all to get this running. Initialize a new project using:
@@ -56,6 +66,12 @@ To implement a GraphQL API, run:
 ## Production
 
 Once in Production, users may log in and add / update content via the dashboard depending on permissions granted them by the admin.
+
+## Documentation
+
+Documentation for the REST API is generated. See the [Strapi Documentation Documentation](https://strapi.io/documentation/3.0.0-beta.x/plugins/documentation.html)
+
+In this demo, the password has been set to: `documentation`
 
 ## Thoughts
 
