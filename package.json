@@ -1,39 +1,40 @@
 {
-  "name": "strapi",
-  "private": true,
-  "version": "0.1.0",
-  "description": "A Strapi application",
-  "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
-  },
-  "devDependencies": {},
-  "dependencies": {
-    "strapi": "3.0.0-beta.17.3",
-    "strapi-admin": "3.0.0-beta.17.3",
-    "strapi-utils": "3.0.0-beta.17.3",
-    "strapi-plugin-settings-manager": "3.0.0-beta.17.3",
-    "strapi-plugin-content-type-builder": "3.0.0-beta.17.3",
-    "strapi-plugin-content-manager": "3.0.0-beta.17.3",
-    "strapi-plugin-users-permissions": "3.0.0-beta.17.3",
-    "strapi-plugin-email": "3.0.0-beta.17.3",
-    "strapi-plugin-upload": "3.0.0-beta.17.3",
-    "strapi-hook-bookshelf": "3.0.0-beta.17.3",
-    "strapi-hook-knex": "3.0.0-beta.17.3",
-    "knex": "latest",
-    "sqlite3": "latest"
-  },
-  "author": {
-    "name": "A Strapi developer"
-  },
-  "strapi": {
-    "uuid": "d6885c22-a8cb-4123-ab7c-d9bec308252c"
-  },
-  "engines": {
-    "node": ">=10.0.0",
-    "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+    "name": "strapi-exploration",
+    "private": true,
+    "version": "0.1.0",
+    "description": "Strapi Exploration",
+    "scripts": {
+        "develop": "strapi develop",
+        "start": "strapi start",
+        "build": "strapi build",
+        "strapi": "strapi"
+    },
+    "devDependencies": {},
+    "dependencies": {
+        "knex": "latest",
+        "sqlite3": "latest",
+        "strapi": "3.0.0-beta.17.3",
+        "strapi-admin": "3.0.0-beta.17.3",
+        "strapi-hook-bookshelf": "3.0.0-beta.17.3",
+        "strapi-hook-knex": "3.0.0-beta.17.3",
+        "strapi-plugin-content-manager": "3.0.0-beta.17.3",
+        "strapi-plugin-content-type-builder": "3.0.0-beta.17.3",
+        "strapi-plugin-email": "3.0.0-beta.17.3",
+        "strapi-plugin-graphql": "^3.0.0-beta.17.3",
+        "strapi-plugin-settings-manager": "3.0.0-beta.17.3",
+        "strapi-plugin-upload": "3.0.0-beta.17.3",
+        "strapi-plugin-users-permissions": "3.0.0-beta.17.3",
+        "strapi-utils": "3.0.0-beta.17.3"
+    },
+    "author": {
+        "name": "Jon Ryser"
+    },
+    "strapi": {
+        "uuid": "d6885c22-a8cb-4123-ab7c-d9bec308252c"
+    },
+    "engines": {
+        "node": ">=10.0.0",
+        "npm": ">=6.0.0"
+    },
+    "license": "MIT"
 }

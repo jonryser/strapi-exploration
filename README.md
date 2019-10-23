@@ -35,13 +35,23 @@ As the admin user, you may begin setting up content types and groups via the int
 
 The interface is pretty clean and seems to allow for a nice bit of content complexity without having an overly complex UI.
 
-Creating content types via the UI generates files in the `api` folder. Each content type has files within a folder with the name of the content type. For example, in this repo, a content type called "restaurant" was created. Thus, there is a corresponding folder within `api` called `restaurant`. Within the content type folder, there are folders for `config`, `controllers`, `models`, and `services`.
+Creating content types via the UI generates files in the `api` folder. Each content type has files within a folder with the name of the content type. For example, in this repo, a content type called "restaurant" was created. Thus, there is a corresponding folder within `api` called `restaurant`. Within the content type folder, there are folders for [config](https://strapi.io/documentation/3.0.0-beta.x/concepts/configurations.html#application), [controllers](https://strapi.io/documentation/3.0.0-beta.x/concepts/controllers.html#concept), [models](https://strapi.io/documentation/3.0.0-beta.x/concepts/models.html), and [services](https://strapi.io/documentation/3.0.0-beta.x/concepts/services.html).
 
 Creating groups via the UI generates files in the `groups` folder. Each group has a json file named for the corresponding group. For example, in this repo, a group called "hours_of_operation" was created. Thus, there is a corresponding json file within `groups` called `hours_of_operation.json`.
 
-An image was uploaded when populating a restaurant content type during the creation of this project. The image was uploaded to the `public` folder in a child folder called `uploads`.
+An image was uploaded when populating a restaurant content type during the creation of this project. The image was uploaded to the [public](https://strapi.io/documentation/3.0.0-beta.x/concepts/public-assets.html) folder in a child folder called `uploads`. Files may be uploaded to external locations as well. Please see the [Strapi Uploads Documentation](https://strapi.io/documentation/3.0.0-beta.x/plugins/upload.html#models-definition)
 
-Once content is created and permissions defined for the fields in the content, it is immediately available via GraphQL request.
+See [file structure](https://strapi.io/documentation/3.0.0-beta.x/concepts/file-structure.html)
+
+Once content is created and permissions defined for the fields in the content, it is immediately available via REST requests.
+
+## GraphQL
+
+See the [Strapi GraphQL Documentation](https://strapi.io/documentation/3.0.0-beta.x/plugins/graphql.html)
+
+To implement a GraphQL API, run:
+
+    $ yarn strapi install graphql
 
 ## Production
 
@@ -49,6 +59,6 @@ Once in Production, users may log in and add / update content via the dashboard 
 
 ## Thoughts
 
-All in all, this seems to be a very quick way to set up a GraphQl content service with a dashboard prebuilt for users to update content.
+All in all, this seems to be a very quick way to set up a GraphQl content service with a dashboard pre-built for users to update content.
 
 I haven't explored the performance for large data at all, but do believe this would be a great solution for small web projects.
