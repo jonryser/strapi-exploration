@@ -1,0 +1,20 @@
+{
+  "info": {
+    "name": "hours_of_operation",
+    "description": "Hours of Operation"
+  },
+  "connection": "default",
+  "collectionName": "groups_hours_of_operations",
+  "attributes": {
+    "day_interval": {
+      "required": true,
+      "type": "string"
+    },
+    "opening_hours": {
+      "type": "string"
+    },
+    "closing_hours": {
+      "type": "string"
+    }
+  }
+}
