@@ -35,7 +35,7 @@ The demo front end user is:
 
 ## Development
 
-From a development point of view there wasn't much at all to get this running. Initialize a new project using:
+From a development point of view there wasn't much at all to get this running. Initialize a new project using \*NOTE: To use a different database, the `--quickstart` flag should not be used. Please see "[Database](#database)" below:
 
     & yarn create strapi-app {PROJECT_NAME} --quickstart
 
@@ -62,6 +62,46 @@ See the [Strapi GraphQL Documentation](https://strapi.io/documentation/3.0.0-bet
 To implement a GraphQL API, run:
 
     $ yarn strapi install graphql
+
+## Database
+
+By default, the application uses SQLite. To use a different database, do not add the `--quickstart` flag to the initialization command.
+
+See the [Strapi Database Documentation](https://strapi.io/documentation/3.0.0-beta.x/guides/databases.html) and the [Strapi Database Configuration Documentation](https://strapi.io/documentation/1.x.x/configuration.html#databases)
+
+The easiest way to spin up a local MySQL instance or Postgres instance is to use Docker.
+
+### MySQL
+
+```bash
+# On MacOS/Linux
+mkdir -p $HOME/docker/volumes/mysql
+docker pull mysql:8.0
+docker run --restart always --name mysql8.0 -v \$HOME/docker/volumes/mysql:/var/lib/mysql -p 3306:3306 -d -e MYSQL_ROOT_PASSWORD=docker mysql:8.0
+```
+
+```powershell
+# On Windows
+mkdir $HOME/docker/volumes/mysql
+docker pull mysql:8.0
+docker run --rm --name mysql-docker -e MYSQL_ROOT_PASSWORD=docker -d -p 3306:3306 mysql:8.0
+```
+
+### Postgres
+
+```bash
+# On MacOS/Linux
+mkdir -p $HOME/docker/volumes/postgres
+docker pull postgres:11.4
+docker run --rm  --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 -v $HOME/docker/volumes/postgres:/var/lib/postgresql/data postgres:11.4
+```
+
+```powershell
+# On Windows
+mkdir $HOME\docker\volumes\postgres
+docker pull postgres:11.4
+docker run --rm --name pg-docker -e POSTGRES_PASSWORD=docker -d -p 5432:5432 postgres:11.4
+```
 
 ## Production
 
